@@ -11,6 +11,9 @@ void insertion_sort_list(listint_t **list)
 	int swapped;
 	listint_t *head;
 
+	if (!list)
+		return;
+
 	head = *list;
 
 	if (!head || !head->next)
