@@ -18,7 +18,7 @@ void quick_sort(int *array, size_t size)
 
 	pivot = partition(array, size);
 	quick_sort(array, pivot);
-	quick_sort(array, size - pivot);
+	quick_sort(array + pivot + 1, size - pivot - 1);
 }
 
 /**
@@ -41,6 +41,10 @@ int partition(int *array, size_t size)
 		if (array[i] < array[pivot])
 		{
 			j++;
+
+			if (i == j)
+				continue;
+
 			tmp = array[j];
 			array[j] = array[i];
 			array[i] = tmp;
