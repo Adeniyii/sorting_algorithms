@@ -38,8 +38,6 @@ int partition(int *array, size_t size)
 
 	for (i = 0; i < pivot; i++)
 	{
-		printf("arr[i]=%d, array[pivot]=%d\n", array[i], array[pivot]);
-
 		if (array[i] < array[pivot])
 		{
 			j++;
@@ -50,7 +48,7 @@ int partition(int *array, size_t size)
 			print_array(array, size);
 		}
 	}
-	printf("out\n");
+
 	j++;
 	tmp = array[j];
 	array[j] = array[pivot];
