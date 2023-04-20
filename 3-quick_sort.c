@@ -61,7 +61,7 @@ int partition(int *array, int top, int bottom, size_t size)
 		{
 			j++;
 
-			if (i == j)
+			if (i == j || array[i] == array[j])
 				continue;
 
 			tmp = array[j];
@@ -74,7 +74,7 @@ int partition(int *array, int top, int bottom, size_t size)
 
 	j++;
 
-	if (j == pivot)
+	if (j == pivot || array[j] == array[pivot])
 		return (j);
 
 	tmp = array[j];
