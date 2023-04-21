@@ -32,9 +32,7 @@ void shell_sort(int *array, size_t size)
 
 					cursor = cursor - gap;
 
-					print_array(array, size);
-
-					if (cursor < 4)
+					if (cursor < gap)
 						break;
 				}
 			}
@@ -43,5 +41,6 @@ void shell_sort(int *array, size_t size)
 			break;
 
 		gap = (gap - 1) / 3;
+		print_array(array, size);
 	}
 }
