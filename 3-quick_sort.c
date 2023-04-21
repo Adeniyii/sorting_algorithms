@@ -39,7 +39,8 @@ void sort(int *array, int top, int bottom, size_t size)
 }
 
 /**
- * partition - partitions array around pivot
+ * partition - partitions array around pivot using the
+ * Lomuto partition scheme.
  *
  * @array: array to partition
  * @top: top of array
@@ -47,7 +48,7 @@ void sort(int *array, int top, int bottom, size_t size)
  * @size: size of array
  *
  * Return: index of pivot
-*/
+ */
 int partition(int *array, int top, int bottom, size_t size)
 {
 	int pivot, tmp, i, j;

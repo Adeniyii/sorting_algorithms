@@ -18,6 +18,24 @@
         "quick"
 			],
 		},
+		{
+			"type": "shell",
+			"label": "build shell_sort",
+			"command": "gcc",
+			"args": [
+				"-g",
+				"-Wall",
+				"-Wextra",
+				"-Werror",
+				"-pedantic",
+				"-std=gnu89",
+				"100-main.c",
+				"100-shell_sort.c",
+				"print_array.c",
+				"-o",
+        "shell"
+			],
+		},
 	],
 	"version": "2.0.0"
 }
